@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-ink font-body antialiased;
+}
+
+.noise-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.glass-dark {
+  @apply bg-black/40 backdrop-blur-xl border border-white/10;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.magnetic-btn {
+  @apply transition-transform duration-300 ease-out;
+}
+
+.magnetic-btn:hover {
+  transform: translateY(-2px);
+}
+
+.lift-on-hover {
+  @apply transition-all duration-300;
+}
+
+.lift-on-hover:hover {
+  transform: translateY(-2px);
+  color: theme("colors.primary");
+}
+
+@keyframes scan-dot {
+  0% {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(42px);
+    opacity: 0;
+  }
+}
+
+.scan-dot {
+  animation: scan-dot 2.4s ease-in-out infinite;
+}
+
+@keyframes bracket-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.bracket-pulse {
+  animation: bracket-pulse 2.8s ease-in-out infinite;
+}
