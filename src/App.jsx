@@ -903,7 +903,7 @@ function Work() {
           </h2>
         </div>
 
-        <div className="mt-16 grid lg:grid-cols-2 gap-6">
+        <div className="mt-16 grid gap-6">
           <article className="work-card rounded-5xl border border-divider bg-surface p-8 sm:p-10">
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -933,43 +933,88 @@ function Work() {
             </ul>
           </article>
 
-          <a
-            href="https://userepurposer.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <div className="grid lg:grid-cols-2 gap-6">
+            <a
+              href="https://userepurposer.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="work-card group rounded-5xl border border-divider bg-deep p-8 sm:p-10 hover:border-primary/40 transition-colors relative overflow-hidden"
-          >
-            <div className="absolute inset-0 grid-bg opacity-30" />
-            <div className="relative">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <p className="text-xs font-semibold tracking-wide text-accent uppercase">
-                    Indie SaaS
-                  </p>
-                  <h3 className="font-display text-2xl sm:text-3xl font-bold mt-2 group-hover:text-primary transition-colors">
-                    UseRepurposer
-                  </h3>
+            >
+              <div className="absolute inset-0 grid-bg opacity-30" />
+              <div className="relative">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-semibold tracking-wide text-accent uppercase">
+                      Indie SaaS
+                    </p>
+                    <h3 className="font-display text-2xl sm:text-3xl font-bold mt-2 group-hover:text-primary transition-colors">
+                      UseRepurposer
+                    </h3>
+                  </div>
+                  <ArrowUpRight className="h-5 w-5 text-muted group-hover:text-primary transition-colors" />
                 </div>
-                <ArrowUpRight className="h-5 w-5 text-muted group-hover:text-primary transition-colors" />
+                <p className="mt-6 text-muted leading-relaxed">
+                  Turn a URL or transcript into LinkedIn, X, newsletter, and TikTok
+                  drafts in about a minute. Built end to end: UI, API, AI, and payments.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["React", "TypeScript", "Express", "Groq", "Stripe", "Supabase"].map(
+                    (s) => (
+                      <span
+                        key={s}
+                        className="rounded-full border border-divider px-3 py-1 text-xs text-muted"
+                      >
+                        {s}
+                      </span>
+                    ),
+                  )}
+                </div>
               </div>
-              <p className="mt-6 text-muted leading-relaxed">
-                Turn a URL or transcript into LinkedIn, X, newsletter, and TikTok
-                drafts in about a minute. Built end to end: UI, API, AI, and payments.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {["React", "TypeScript", "Express", "Groq", "Stripe", "Supabase"].map(
-                  (s) => (
+            </a>
+
+            <a
+              href="https://expense-web-app-a1h2.onrender.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="work-card group rounded-5xl border border-divider bg-deep p-8 sm:p-10 hover:border-primary/40 transition-colors relative overflow-hidden"
+            >
+              <div className="absolute inset-0 grid-bg opacity-30" />
+              <div className="relative">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-semibold tracking-wide text-accent uppercase">
+                      Personal product
+                    </p>
+                    <h3 className="font-display text-2xl sm:text-3xl font-bold mt-2 group-hover:text-primary transition-colors">
+                      Ledger
+                    </h3>
+                  </div>
+                  <ArrowUpRight className="h-5 w-5 text-muted group-hover:text-primary transition-colors" />
+                </div>
+                <p className="mt-6 text-muted leading-relaxed">
+                  A polished expense tracker with dashboard analytics, reports, and
+                  auth — React frontend paired with a Node API.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {[
+                    "React",
+                    "TypeScript",
+                    "Redux Toolkit",
+                    "Express",
+                    "MongoDB",
+                    "Swagger",
+                  ].map((s) => (
                     <span
                       key={s}
                       className="rounded-full border border-divider px-3 py-1 text-xs text-muted"
                     >
                       {s}
                     </span>
-                  ),
-                )}
+                  ))}
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
     </section>
