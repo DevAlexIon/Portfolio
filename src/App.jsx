@@ -992,17 +992,18 @@ function Work() {
                   <ArrowUpRight className="h-5 w-5 text-muted group-hover:text-primary transition-colors" />
                 </div>
                 <p className="mt-6 text-muted leading-relaxed">
-                  A polished expense tracker with dashboard analytics, reports, and
-                  auth, React frontend paired with a Node API.
+                  Expense tracker with dashboard analytics, reports, and auth.
+                  React web app plus an Expo / React Native client on the same API.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {[
                     "React",
                     "TypeScript",
                     "Redux Toolkit",
+                    "Expo",
+                    "React Native",
                     "Express",
                     "MongoDB",
-                    "Swagger",
                   ].map((s) => (
                     <span
                       key={s}

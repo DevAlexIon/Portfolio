@@ -27,7 +27,7 @@ The site is a single-page experience with scroll-driven motion, a teal dark visu
 
 - Hero with clear positioning and CTAs (email, CV, work)
 - Interactive capability cards and sticky protocol section
-- Featured projects (including UseRepurposer)
+- Featured projects (UseRepurposer, Ledger web + mobile)
 - Skills / stack section aligned with real production work
 - Contact form via [Web3Forms](https://web3forms.com/)
 - CV download from `/Alexandru_Ion_CV.pdf`
