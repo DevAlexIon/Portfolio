@@ -993,7 +993,7 @@ function Work() {
                 </div>
                 <p className="mt-6 text-muted leading-relaxed">
                   A polished expense tracker with dashboard analytics, reports, and
-                  auth — React frontend paired with a Node API.
+                  auth, React frontend paired with a Node API.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {[
